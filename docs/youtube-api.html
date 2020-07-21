@@ -10,6 +10,7 @@
 　　
   <input type="text" value="M7lc1UVf-VE" id="txt-video-id" />
   <input type="button" value="再生" onclick="play();" />
+  <input type="button" value="停止" onclick="videoStop();" />
 
   <script>
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -53,9 +54,13 @@
 
     function play() {
       var vid = document.getElementById('txt-video-id').value;
-      alert('vid:[' + vid + ']');
+      // alert('vid:[' + vid + ']');
       initVideo(vid);
       player.playVideo();
+    }
+
+    function videoStop() {
+      player.pauseVideo();
     }
   </script>
 </body>
