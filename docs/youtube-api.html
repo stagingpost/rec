@@ -31,15 +31,15 @@
         player = new YT.Player('player', {
           height: '360',
           width: '640',
-          videoId: 'M7lc1UVf-VE',
+          //videoId: 'M7lc1UVf-VE',
           events: {
             'onReady': onPlayerReady,
           }
         });
       }
 
-    function initVideo(){
-        player.videoId = '8c0opnrkx0E';
+    function initVideo(videoId) {
+      player.cueVideoById({videoId: videoId});
     }
 
     // 4. The API will call this function when the video player is ready.
@@ -52,9 +52,9 @@
     }
 
     function play() {
-      initVideo();
-      //alert('ok!');
-
+      var vid = document.getElementById('txt-video-id').value;
+      alert('vid:[' + vid + ']');
+      initVideo(vid);
       player.playVideo();
     }
   </script>
