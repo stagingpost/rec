@@ -82,9 +82,12 @@ function startup() {
     document.body.appendChild(a)
     a.style = 'display:none'
     a.href = url;
-    a.download = 'test.webm'
+    a.download = 'recording-data.webm'
     a.click()
-    window.URL.revokeObjectURL(url)
+    // iOSで「発生したエラー:"操作を完了できませんでした。(WebKitBlobResourceエラー1)"」となる事の対策
+    setTimeout(() => {
+      window.URL.revokeObjectURL(url)
+    }, 200)
   })
 }
 
