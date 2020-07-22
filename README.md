@@ -13,7 +13,9 @@ https://stagingpost.github.io/rec/
 
 # 各要素を試すためのサンプルプログラム
 ## カメラ許可＆録画
-https://stagingpost.github.io/rec/youtube-api.html
+https://stagingpost.github.io/rec/recording.html
+
+※PCではうまくいくが、iPhoneではうまくいっていない。
 
 ### ref
 - https://qiita.com/niisan-tokyo/items/fa6ff649a9a3312148bc
