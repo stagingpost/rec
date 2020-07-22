@@ -15,6 +15,8 @@ https://stagingpost.github.io/rec/
 ## カメラ許可＆録画
 https://stagingpost.github.io/rec/recording.html
 
+![qr20200722160942504](https://user-images.githubusercontent.com/3211869/88145711-d198b380-cc35-11ea-97fe-27386ad13c40.png)
+
 ※PCではうまくいくが、iPhoneではうまくいっていない。
 
 ### ref
