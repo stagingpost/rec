@@ -72,7 +72,10 @@ function startup() {
     a.href = url;
     a.download = 'test.webm'
     a.click()
-    window.URL.revokeObjectURL(url)
+    // iOSで「発生したエラー:"操作を完了できませんでした。(WebKitBlobResourceエラー1)"」となる事の対策
+    setTimeout(() => {
+      window.URL.revokeObjectURL(url)
+    }, 200)
   })
 }
 
@@ -89,6 +92,7 @@ function videoStart() {
   })
   .catch(function(err) {
       console.log("An error occured! " + err)
+      alert("An error occured! " + err)
   })
 }
 
