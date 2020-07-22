@@ -5,7 +5,7 @@
 </head>
 <body>
     <div class="camera">
-        <video id="video">Video stream not available.</video>
+        <video id="video" playsinline>Video stream not available.</video>
     </div><br>
 
 	★まず、↓にVideoのIDを入力して、「開始」を押してください。<br />
@@ -144,6 +144,9 @@ startup();
         player = new YT.Player('player', {
           height: '360',
           width: '640',
+          playerVars: {
+            playsinline: 1
+          },
           //videoId: 'M7lc1UVf-VE',
           events: {
             'onReady': onPlayerReady,
